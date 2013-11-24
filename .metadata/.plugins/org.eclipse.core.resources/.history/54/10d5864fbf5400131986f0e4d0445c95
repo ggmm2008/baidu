@@ -1,0 +1,19 @@
+package a;
+
+public class RethrowNew {
+	
+	public void f() throws Exception{
+		System.out.println("f()");
+		throw new Exception("throw exception from f()");
+	}
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package a;
+
+import java.util.*;
+
+class Gerbill{
+	public  int gerbillNumber;
+	public Gerbill(){
+		gerbillNumber=(int) (Math.random()*10);
+	}
+	
+	public void hop(){
+		System.out.println("gerbillNumber="+gerbillNumber);
+	}
+	
+	public String toString(){
+		return "Gerbill"+gerbillNumber;
+	}
+}
+
+
+
+
+
+public class Hello {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vector vgn=new Vector();
+		vgn.add(new Gerbill());
+		vgn.add(new Gerbill());
+		vgn.add(new Gerbill());
+		vgn.add(new Gerbill());
+		vgn.add(new Gerbill());
+		vgn.add(new Gerbill());
+		
+		Hashtable<String,Integer> ha=new Hashtable<String,Integer>();
+		for(int i=0;i<vgn.size();i++){
+			ha.put(""+vgn.elementAt(i),vgn.elementAt(i).gerbillNumber+0);
+		}
+		
+		
+	}
+
+}

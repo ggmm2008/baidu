@@ -1,0 +1,24 @@
+package a;
+
+public class Rethrowing {
+
+	public static void f() throws Exception{
+		System.out.println("throw exception f()");
+		throw new Exception("f() exception");
+	}
+	
+	public static void g() throws Throwable{
+		try{
+			f();
+		}catch(Exception e){
+			System.out.println("inside g()");
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
